@@ -1,6 +1,6 @@
-# RESTy
+# RESTy Counter
 
-### Author : Hatem Husnieh
+### Author : Ibrahim Abuawad
 
 ## install
 
