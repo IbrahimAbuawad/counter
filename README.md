@@ -13,8 +13,8 @@
 
 - [Pull Request](https://github.com/IbrahimAbuawad/counter/pull/2)
 - [SandBox](https://codesandbox.io/s/thirsty-bose-snkn4)
-- [actions]()
-- [Netlify]()
+- [actions](https://github.com/IbrahimAbuawad/counter/actions)
+- [Netlify](https://wonderful-yalow-530307.netlify.app)
 
 ### Setup
 
