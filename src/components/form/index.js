@@ -11,18 +11,34 @@ function Form(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
+      if(e.target.url.value){
       const formData = {
         method: method,
         body: body,
         url: url
       }
-
       const raw = await fetch(formData.url);
       const data = await raw.json();
       console.log(data);
       props.handleApiCall(formData, data);
       props.loading(true);
+    }
+      else{
+        const formData ={
+          count: 2,
+          results: [
+            { name: 'fake thing 1', url: 'http://fakethings.com/1' },
+            { name: 'fake thing 2', url: 'http://fakethings.com/2' },
+          ],
+        };
+      props.requestParams({url:'http://fakethings.com',method:'GET'})
+        props.data(formData)
+        props.loading(true);
+      }
 
+     
+    
+  
     } catch (error) {
       console.log(error)
     }
