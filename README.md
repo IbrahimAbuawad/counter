@@ -11,8 +11,10 @@
 
 ## Deploy, Run and Test
 
-- [Pull Request](https://github.com/IbrahimAbuawad/counter/pull/1)
+- [Pull Request](https://github.com/IbrahimAbuawad/counter/pull/2)
 - [SandBox](https://codesandbox.io/s/thirsty-bose-snkn4)
+- [actions]()
+- [Netlify]()
 
 ### Setup
 
