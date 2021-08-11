@@ -17,7 +17,10 @@ function App() {
     const data = {
    count:data2.count,
    results:data2.results,
-   Headers:'Header ...',
+   Headers:{
+    "cache-control": "public, max-age=86400, s-maxage=86400",
+    "content-type": "application/json; charset=utf-8"
+  },
     };
     console.log(data);
     setData(data);
@@ -34,7 +37,7 @@ function App() {
       <Header />
       <div>Request Method: {requestParams.method}</div>
       <div>URL: {requestParams.url}</div>
-      <Form handleApiCall={callApi} loading={loading} />
+      <Form handleApiCall={callApi} loading={loading} data={setData} requestParams={setRequestParams}/>
       {load ?  <Results data={data}  />:'please wait ...'}
       <Footer />
     </React.Fragment>
