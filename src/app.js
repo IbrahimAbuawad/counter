@@ -92,7 +92,7 @@ function App() {
 
       </ul>
       </h3>
-      <Form handleApiCall={callApi} loading={loading} data={setData} requestParams={setRequestParams} />
+      <Form handleApiCall={callApi} setLoad={setLoad} loading={loading} data={setData} requestParams={setRequestParams} />
       {load ? <Results data={data} /> : 'please wait ...'}
       <Footer />
     </React.Fragment>
