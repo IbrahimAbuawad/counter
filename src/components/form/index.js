@@ -69,9 +69,9 @@ function Form(props) {
   }
 
 
-  useEffect(() => {
-    props.loading(false);
-  }, [method,url])
+  // useEffect(() => {
+  //   props.setLoad(false);
+  // }, [method,url])
   
   return (
     <>
