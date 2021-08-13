@@ -11,7 +11,7 @@ function Results(props) {
       {props.data &&
         <>
           <h4>"Headers : </h4>
-          <JSONPretty id="json-pretty" data={props.data.Headers}></JSONPretty>
+          <JSONPretty  data={props.data.Headers}></JSONPretty>
 
 
           <h4>"Results : </h4>
