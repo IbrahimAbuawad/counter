@@ -7,24 +7,6 @@ function Form(props) {
   const [body, setBody] = useState('');
   const [jsonArea, setJsonArea] = useState(false);
 
-  const resultLists = document.getElementById('rList');
-
-  function renderHistory() {
-    let li = document.createElement('li');
-    let methodSpan = document.createElement('span');
-    methodSpan.textContent=`${method}`;
-
-    if(methodSpan.textContent ==='get'){ methodSpan.className = 'get'; methodSpan.style.backgroundColor='yellow'};
-    if(methodSpan.textContent ==='put') methodSpan.className = 'put';
-    if(methodSpan.textContent ==='post') methodSpan.className = 'post';
-    if(methodSpan.textContent ==='delete') methodSpan.className = 'delete';
-
-    let urlSpan = document.createElement('span');
-    urlSpan.textContent=`${url}`;
-    resultLists.appendChild(li);
-    li.textContent = `${methodSpan.textContent} : ${urlSpan.textContent}`;
-   }
-
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -38,7 +20,8 @@ function Form(props) {
       const data = await raw.json();
       console.log(data);
       props.handleApiCall(formData, data);
-      props.loading(true);
+      // props.loading(true);
+      // props.historyArray.push(formData)
     }
       else{
         const formData ={
@@ -48,15 +31,17 @@ function Form(props) {
             { name: 'fake thing 2', url: 'http://fakethings.com/2' },
           ],
         };
+
       props.requestParams({url:'http://fakethings.com',method:'GET'})
         props.data(formData)
         props.loading(true);
+
       }
      
      focus(method);
 
 
-     renderHistory()
+    //  renderHistory()
 
 
     } catch (error) {
